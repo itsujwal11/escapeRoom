@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Escape Room 2025</string>
+    <string name="welcome_user">Welcome, %s!</string>
+    <string name="score_label">Score: %d</string>
+    <string name="puzzle_instruction">Note: You need to solve all the puzzles in the rooms to escape</string>
+    <string name="hint_message">There are 4 pieces of image, Drag and drop to the original place</string>
+    <string name="puzzle_not_solved">Complete the puzzle to move to the next room</string>
+    <string name="puzzle_solved">Congratulations! Puzzle solved!</string>
+    <string name="game_over">Game Over! You failed to escape.</string>
+    <string name="score_reset">Score and puzzle progress reset!</string>
+    <string name="time_left">Time Left: %ds</string>
+
+    <string name="time_over">Time Over!</string>
+    <string name="room_1_selected">Entering Room 1</string>
+    <string name="room_2_selected">Entering Room 2</string>
+    <string name="time_up_try_again">Time\'s up! Please try again.</string>
+</resources>

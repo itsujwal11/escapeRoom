@@ -1,0 +1,57 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackground"> <!-- Background for the entire layout -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+
+     >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/card_gradient_background"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please create your username!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                android:textColor="#FF000000"/> <!-- Black text -->
+
+            <EditText
+                android:id="@+id/usernameInput"
+                android:hint="Enter Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="20dp"
+                android:textColorHint="#FF757575"/> <!-- Gray hint text -->
+
+            <Button
+                android:id="@+id/btnNext"
+                android:text="Next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="12dp"
+                android:textSize="18sp"
+                android:background="@drawable/button_background"
+                android:stateListAnimator="@null"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

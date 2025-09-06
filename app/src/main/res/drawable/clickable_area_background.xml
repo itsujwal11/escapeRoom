@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Make the fill fully transparent -->
+    <solid android:color="#00000000" />
+    <!-- Remove the border by setting it to transparent -->
+    <stroke android:width="2dp" android:color="#00000000" />
+    <corners android:radius="4dp" />
+</shape>

@@ -1,0 +1,143 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roombackground"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Username Display -->
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_user"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- Score Display -->
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_label"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- Progress Display -->
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room 1/3"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- Instruction Text -->
+
+    <!-- Room Container -->
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#AD000000"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/roomContainer"
+        android:layout_width="422dp"
+        android:layout_height="428dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/interior">
+
+        <ImageView
+            android:id="@+id/overlayImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+        android:src="@drawable/zoomed"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/clickable_area_background"
+        android:contentDescription="Zoomed Image" />
+
+        <View
+            android:id="@+id/clickableArea"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="132dp"
+            android:layout_marginBottom="223dp"
+            android:background="@drawable/clickable_area_background"
+            android:clickable="true" />
+    </RelativeLayout>
+
+    <!-- Horizontal container for the buttons -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Hint Button as ImageView -->
+        <ImageView
+            android:id="@+id/hintButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:contentDescription="Hint Button"
+            android:focusable="true"
+            android:src="@drawable/hint" />
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_selector"
+            android:elevation="4dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Room"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_selector"
+            android:elevation="4dp"/>
+    </LinearLayout>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/reset_button_selector"
+        android:gravity="center"
+        android:text="Reset Puzzle"
+        android:textColor="#FFFFFF"
+        android:elevation="4dp"/>
+</LinearLayout>

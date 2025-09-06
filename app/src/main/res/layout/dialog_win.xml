@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#80000000"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/winIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@android:drawable/checkbox_on_background"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/winTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ESCAPE SUCCESSFUL!"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/winMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moves: 0\nTime: 0s\nScore: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/winOkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:background="@drawable/button_selector"
+        android:textColor="#FFFFFF"
+        android:padding="8dp" />
+
+</LinearLayout>

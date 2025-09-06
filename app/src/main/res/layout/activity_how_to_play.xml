@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5E8C7"
+    android:padding="16dp">
+
+    <!-- Centered Title at the top -->
+
+    <!-- RecyclerView filling middle space -->
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="96dp"
+        android:text="How to Play"
+        android:textColor="#4A2C2A"
+        android:textSize="28sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/instructionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/backButton"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="vertical" />
+
+    <!-- Centered Button at the bottom -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/button_background_purple_light"
+        android:padding="12dp"
+        android:text="BACK"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

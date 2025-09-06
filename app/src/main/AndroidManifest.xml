@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.escaperoom"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/newicon"
+        android:label="Escape Room 2025"
+        android:roundIcon="@mipmap/newicon"
+        android:name=".GameApp"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EscapeRoom">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/FullScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginActivity" android:exported="false"/>
+
+
+
+        <!-- RoomActivity (Room 1) -->
+        <activity
+            android:name=".RoomActivity"
+            android:exported="false" />
+
+        <!-- Room2Activity (Room 2) -->
+        <activity
+            android:name=".Room2Activity"
+            android:exported="false" />
+
+        <!-- GameActivity (if needed later) -->
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+
+        <!-- HowToPlayActivity -->
+        <activity
+            android:name=".HowToPlayActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

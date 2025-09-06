@@ -1,0 +1,189 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roombackground"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Username Display -->
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_user"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- Score Display -->
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_label"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- Progress Display -->
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room 2/2"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- Instruction Text -->
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:background="#AD090909"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- Room Container -->
+    <RelativeLayout
+        android:id="@+id/roomContainer"
+        android:layout_width="422dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/room2img">
+
+        <!-- VideoView for animation -->
+        <VideoView
+            android:id="@+id/drawerVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:focusable="false"
+            android:background="@android:color/transparent" />
+
+        <!-- ImageView for opened drawer -->
+        <ImageView
+            android:id="@+id/overlayImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/openeddrawer"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Opened Drawer Image" />
+
+        <ImageView
+            android:id="@+id/lampZoomOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lamp_zoom"
+            android:visibility="gone"
+            android:background="#CC000000" />
+
+        <!-- Clickable drawer area -->
+        <View
+            android:id="@+id/KeyClickableArea"
+            android:layout_width="82dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="159dp"
+            android:layout_marginBottom="135dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Lamp Clickable Area -->
+        <View
+            android:id="@+id/lampArea"
+            android:layout_width="79dp"
+            android:layout_height="99dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="132dp"
+            android:layout_marginBottom="229dp"
+            android:clickable="true"
+            android:visibility="visible"
+            android:focusable="true" />
+
+        <!-- Key Clickable Area only active with lamp -->
+        <View
+            android:id="@+id/keyClickArea"
+            android:layout_width="100dp"
+            android:layout_height="89dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="248dp"
+            android:layout_marginEnd="74dp"
+            android:layout_marginBottom="9dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!-- Button Container -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/hintButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:contentDescription="Hint Button"
+            android:focusable="true"
+            android:src="@drawable/hint" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_selector"
+            android:elevation="4dp"
+            android:text="Back"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/reset_button_selector"
+        android:gravity="center"
+        android:text="Reset Puzzle"
+        android:textColor="#FFFFFF"
+        android:elevation="4dp"/>
+
+</LinearLayout>
